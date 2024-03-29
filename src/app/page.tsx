@@ -1,9 +1,5 @@
-import React from 'react'
+import { redirect } from "next/navigation"
 
-const page = () => {
-  return (
-    <div>ali</div>
-  )
+export default function RootPage() {
+    redirect('en');
 }
-
-export default page
