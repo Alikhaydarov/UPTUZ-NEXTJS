@@ -1,9 +1,9 @@
 'use client'
 import Link from 'next/link'
 import React from 'react'
-import ThemeToggle from './ThemeToggle'
 import { useTheme } from '@emotion/react';
 import 'flowbite';
+import ThemeToggle from './ThemeToggle';
 
 function navbar() {
 
