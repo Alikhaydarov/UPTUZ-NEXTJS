@@ -7,6 +7,8 @@ import { space } from 'postcss/lib/list'
 
 export default function ThemeToggle() {
     const { resolvedTheme, theme, setTheme } = useTheme();
+
+    console.log(resolvedTheme, theme)
     return (
         <button
             onClick={() => {
