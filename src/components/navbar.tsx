@@ -10,9 +10,8 @@ import logo from './../../public/photo_2024-01-02_20-00-52__2_-removebg-preview 
 import logo2 from './../../public/photo_2024-01-02_20-08-51-removebg-preview (1).png'
 
 
-
+const {theme}  = useTheme();
 function navbar() {
-    const { theme } = useTheme();
     return (
         <header className="backdrop-blur-2xl flex flex-wrap sm:justify-start sm:flex-nowrap w-full shadow-md">
             <nav className="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between" aria-label="Global">
