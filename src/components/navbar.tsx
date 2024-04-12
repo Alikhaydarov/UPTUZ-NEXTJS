@@ -11,7 +11,7 @@ import logo2 from './../../public/photo_2024-01-02_20-08-51-removebg-preview (1)
 
 
 // const {theme}  = useTheme();l
-export default function navbar() {
+export default function Navbar() {
     const { theme } = useTheme();
     return (
         <header className="backdrop-blur-2xl flex flex-wrap sm:justify-start sm:flex-nowrap w-full shadow-md">
