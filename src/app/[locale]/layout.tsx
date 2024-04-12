@@ -4,8 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { HydrationContext, Client, HydrationProvider } from "react-hydration-provider";
 import Provider from "./provider";
+import Navbar from "@/components/Navbar";
 // import { Providers} from "./providers";
-import Navbar from './../../components/Navbar';
 
 const inter = Inter({ subsets: ["latin"] });
 
