@@ -3,9 +3,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { HydrationContext, Client, HydrationProvider } from "react-hydration-provider";
-import Provider from "./provider";
-import Navbar from "@/components/Navbar";
-// import { Providers} from "./providers";
+import Provider from "./provider";// import { Providers} from "./providers";
+import Header from "@/components/header";
+
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +33,8 @@ export default function RootLayout({
         <HydrationProvider>
           <Client>
             <ThemeProvider defaultTheme="system" attribute="class">
-              <Navbar />
+              <Header/>
               {children}
-              <script src="./node_modules/preline/dist/preline.js"></script>
             </ThemeProvider>
           </Client>
         </HydrationProvider>
