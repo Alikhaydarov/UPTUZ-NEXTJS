@@ -29,10 +29,11 @@ import logo2 from './../../public/photo_2024-01-02_20-08-51-removebg-preview (1)
                 </div>
                 <div id="navbar-alignment" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2">
                     <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5 p-7">
-                        <a className="font-medium text-blue-500" href="#" aria-current="page">Landing</a>
-                        <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500" href="#">Account</a>
-                        <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500" href="#">Work</a>
-                        <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500" href="#">Blog</a>
+                        <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">ABOUT US</Link>
+                        <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">SERVICES</Link>
+                        <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">PORTFOLIO</Link>
+                        <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">CAREER</Link>
+                        <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">BLOG</Link>
                     </div>
                 </div>
             </nav>
