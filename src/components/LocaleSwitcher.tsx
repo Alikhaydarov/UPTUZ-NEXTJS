@@ -12,7 +12,7 @@ const LocaleSwitcher = () => {
   const dsf = useLocale()
   const router = useRouter()
   const locale = useLocale()
-  
+
   const handleChange = (e: any) => {
     router.push(`/${e.target.value}`)
   }
@@ -23,7 +23,7 @@ const LocaleSwitcher = () => {
         <div className="relative border-none dark:bg-slate-900">
           <select onChange={handleChange} className="appearance-none w-10 py-1 px-2" name="whatever" id="frm-whatever">
             {options.map((option, indx) => (
-              <option value={option} selected={locale == option ? true : false}>{option.toLocaleUpperCase()}</option>
+              <option key={indx} value={option} selected={locale == option ? true : false}>{option.toLocaleUpperCase()}</option>
             ))}
           </select>
         </div>
