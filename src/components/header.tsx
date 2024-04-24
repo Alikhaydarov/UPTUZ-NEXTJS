@@ -22,7 +22,7 @@ import { useTranslations } from 'next-intl'
         <header className="backdrop-blur-2xl flex flex-wrap sm:justify-start sm:flex-nowrap w-full shadow-md">
             <nav className="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between" aria-label="Global">
                 <Link href={"/"}>
-                    {theme === "light" ? <Image src={logo} alt='logo' className='ml-10' height={"45"} /> : <Image src={logo2} alt='logo' className='ml-10' height={"45"} />}
+                    {theme === "light" ? <Image src={logo} alt='logo' className='sm:ml-10' height={"45"} /> : <Image src={logo2} alt='logo' className='sm:ml-10' height={"45"} />}
                 </Link>
                 {/* Brend */}
                 <div className="sm:order-3 flex items-center gap-x-2 p-3">

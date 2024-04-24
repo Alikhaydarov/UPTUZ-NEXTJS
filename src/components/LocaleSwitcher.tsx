@@ -31,7 +31,7 @@ const LocaleSwitcher = () => {
   }
 
   return (
-    <form className="w-2 mr-10 border-transparent">
+    <form className="w-2 mr-10 border-transparent max-sm:hidden">
       <fieldset>
         <div className="relative border-transparent bg-white dark:bg-transparent border-0 ">
           <select onChange={handleChange} className="appearance-none w-10 py-1 px-2 dark:bg-transparent outline-none cursor-pointer" name="whatever" id="frm-whatever">
