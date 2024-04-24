@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
       <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
         <div className="sm:max-w-lg">
-          <h1 className="font text-8xl  font-bold tracking-tight dark:text-white sm:text-6xl">{t('title1')}</h1>
+          <h1 className="font text-6xl  font-bold tracking-tight dark:text-white sm:text-6xl">{t('title1')}</h1>
           <p className="mt-4 text-xl text-gray-500">{t('title2')}</p>
         </div>
         <div>
