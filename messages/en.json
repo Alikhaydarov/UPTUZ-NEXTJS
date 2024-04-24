@@ -1,5 +1,17 @@
 {
     "Index": {
       "title": "Hello world!"
+    },
+    "Header":{
+      "link1": "ABOUT US",
+      "link2": "SERVICES",
+      "link3": "PORTFOLIO",
+      "link4": "CAREER",
+      "link5": "BLOG"
+    },
+    "Hero":{
+      "title1":"We offer digital solutions",
+      "title2":"Our goal is always quality",
+      "title3":"Portfolio"
     }
   }

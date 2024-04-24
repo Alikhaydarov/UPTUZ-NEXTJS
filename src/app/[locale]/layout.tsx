@@ -5,7 +5,8 @@ import { ThemeProvider } from "next-themes";
 import { HydrationContext, Client, HydrationProvider } from "react-hydration-provider";
 import Provider from "./provider";// import { Providers} from "./providers";
 import Header from "@/components/header";
-
+import Hero from "@/components/hero";
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 
 
@@ -27,17 +28,25 @@ export default function RootLayout({
   children,
   params: { locale },
 }: Readonly<RootLayoutProps>) {
+
+  const messages = useMessages()
+
   return (
     <html lang={locale} className={inter.className}>
       <body className="dark:bg-gray-900">
-        <HydrationProvider>
-          <Client>
-            <ThemeProvider defaultTheme="system" attribute="class">
-              <Header/>
-              {children}
-            </ThemeProvider>
-          </Client>
-        </HydrationProvider>
+
+        <ThemeProvider defaultTheme="system" attribute="class">
+          <HydrationProvider>
+            <Client>
+              <NextIntlClientProvider locale={locale} messages={messages}>
+                <Header />
+
+                {children}
+              </NextIntlClientProvider >
+            </Client>
+          </HydrationProvider>
+        </ThemeProvider>
+
       </body>
     </html>
   );

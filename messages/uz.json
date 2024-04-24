@@ -1,5 +1,17 @@
 {
     "Index": {
       "title": "salom oka"
+    },
+    "Header":{
+      "link1": "BIZ HAQIMIZDA",
+      "link2": "XIZMATLAR",
+      "link3": "PORTFOLIO",
+      "link4": "KARYERA",
+      "link5": "BLOG"
+    },
+    "Hero":{
+      "title1":"Raqamli yechimlarni taklif qilamiz",
+      "title2":"Bizning maqsad har doimo sifat",
+      "title3":"Portfolio"
     }
   }
