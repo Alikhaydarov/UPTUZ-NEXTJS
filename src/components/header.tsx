@@ -35,7 +35,7 @@ import { useTranslations } from 'next-intl'
                 </div>
                 <div id="navbar-alignment" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2">
                     <div className="flex flex-col gap-12 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5 p-7">
-                        <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="about">{t('link1')}</Link>
+                        <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="/about">{t('link1')}</Link>
                         <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">{t('link2')}</Link>
                         <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">{t('link3')}</Link>
                         <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">{t('link4')}</Link>
