@@ -15,11 +15,11 @@ import { useTranslations } from 'next-intl'
 
 // const {theme}  = useTheme();l
 
- function Header() {
+function Header() {
     const t = useTranslations('Header')
     const { theme } = useTheme();
     return (
-        <header className="backdrop-blur-2xl flex flex-wrap sm:justify-start sm:flex-nowrap w-full shadow-md">
+        <header className="backdrop-blur-2xl flex flex-wrap sm:justify-start sm:flex-nowrap w-full shadow-md fixed z-10">
             <nav className="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between" aria-label="Global">
                 <Link href={"/"}>
                     {theme === "light" ? <Image src={logo} alt='logo' className='sm:ml-10' height={"45"} /> : <Image src={logo2} alt='logo' className='sm:ml-10' height={"45"} />}
@@ -30,13 +30,13 @@ import { useTranslations } from 'next-intl'
                         <svg className="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6" /><line x1="3" x2="21" y1="12" y2="12" /><line x1="3" x2="21" y1="18" y2="18" /></svg>
                         <svg className="hs-collapse-open:block hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
                     </button>
-                    <LocaleSwitcher />  
+                    <LocaleSwitcher />
                     <ThemeToggle />
                 </div>
                 <div id="navbar-alignment" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2">
                     <div className="flex flex-col gap-12 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5 p-7">
                         <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="/about">{t('link1')}</Link>
-                        <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">{t('link2')}</Link>
+                        <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="services">{t('link2')}</Link>
                         <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">{t('link3')}</Link>
                         <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">{t('link4')}</Link>
                         <Link className="font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500" href="#">{t('link5')}</Link>
