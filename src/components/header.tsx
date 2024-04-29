@@ -9,6 +9,7 @@ import LocaleSwitcher from './LocaleSwitcher';
 import logo from './../../public/photo_2024-01-02_20-00-52__2_-removebg-preview (1).png'
 import logo2 from './../../public/photo_2024-01-02_20-08-51-removebg-preview (1).png'
 import { useTranslations } from 'next-intl'
+import { motion, useScroll } from "framer-motion"
 
 
 
@@ -16,6 +17,7 @@ import { useTranslations } from 'next-intl'
 // const {theme}  = useTheme();l
 
 function Header() {
+    const { scrollYProgress } = useScroll();
     const t = useTranslations('Header')
     const { theme } = useTheme();
     return (
@@ -43,7 +45,10 @@ function Header() {
                     </div>
                 </div>
             </nav>
-        </header>
+            <motion.div
+          className='fixed top-full w-full left-0 r-5 h-1 bg-violet-800 origin-[0%] transition-all '
+          style={{ scaleX: scrollYProgress }}
+        />        </header>
     )
 }
 export default Header
