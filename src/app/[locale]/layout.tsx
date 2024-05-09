@@ -34,13 +34,11 @@ export default function RootLayout({
   return (
     <html lang={locale} className={inter.className}>
       <body className="dark:bg-gray-900">
-
         <ThemeProvider defaultTheme="system" attribute="class">
           <HydrationProvider>
             <Client>
               <NextIntlClientProvider locale={locale} messages={messages}>
                 {/* <Header /> */}
-
                 {children}
               </NextIntlClientProvider >
             </Client>
