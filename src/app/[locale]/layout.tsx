@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 interface RootLayoutProps {
   children: React.ReactNode;
   params: {
+
     locale: string;
   }
 }
@@ -28,7 +29,7 @@ export default function RootLayout({
   children,
   params: { locale },
 }: Readonly<RootLayoutProps>) {
-
+  
   const messages = useMessages()
 
   return (
@@ -44,7 +45,6 @@ export default function RootLayout({
             </Client>
           </HydrationProvider>
         </ThemeProvider>
-
       </body>
     </html>
   );

@@ -6,8 +6,19 @@ export default function Hero() {
   return (
 
 <div className="relative overflow-hidden">
+{/* <>
+    <div class="container h-screen relative flex justify-center items-center">
+      <div
+        class="bg-sky-200 absolute h-96 w-1/4 rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-[-200px] translate-y-[-100px]"
+      ></div>
+      <div
+        class="bg-sky-400 absolute h-96 w-1/4 rounded-full mix-blend-multiply filter blur-3xl opacity-50"
+      ></div>
+      <div
+        class="bg-sky-200 absolute h-96 w-1/4 rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-[200px] translate-y-[100px]"
+      ></div></div></> */}
 <Fade cascade={true} direction="left" triggerOnce={true} duration={600}>
-    <div className="pt-16 pb-10 sm:pt-24 sm:pb-40 lg:pt-60 lg:pb-48 w-full">
+    <div className="pt-16 pb-10 sm:pt-24 sm:pb-40 lg:pt-60 lg:pb-48 w-full top-0">
       <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
         <div className="sm:max-w-lg w-full">
           <h1 className="text-4xl font-bold tracking-tight dark:text-white sm:text-5xl sm:leading-tight w-full max-sm:mt-10">{t('title1')}</h1>
@@ -46,7 +57,9 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
+              
             </div>
+            
             <div className="min sm:hidden grid min-[]: min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
   <div className="grid grid-cols-2 gap-2">
     <div>

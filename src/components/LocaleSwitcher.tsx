@@ -31,12 +31,13 @@ const LocaleSwitcher = () => {
   }
 
   return (
-    <form className="w-2 mr-10 border-transparent max-sm:hidden">
+    
+    <form className="w-2 mr-10 border-transparent max-sm:hidden bg-transparent">
       <fieldset>
-        <div className="relative border-transparent bg-white dark:bg-transparent border-0 ">
-          <select onChange={handleChange} className="appearance-none w-10 py-1 px-2 dark:bg-transparent outline-none cursor-pointer" name="whatever" id="frm-whatever">
+        <div className="relative border-transparent bg-transparent dark:bg-transparent border-0 ">
+          <select onChange={handleChange} className="appearance-none w-10 font-bold  py-1 px-2 bg-transparent dark:bg-transparent outline-none cursor-pointer" name="whatever" id="frm-whatever">
             {options.map((option, indx) => (
-              <option className='dark:bg-slate-900 outline-none px-12 cursor-pointer' key={indx} value={option.title} selected={locale == option.title ? true : false}><span className='px-10 cursor-pointer'>{option.title.toLocaleUpperCase()}</span></option>
+              <option className='dark:bg-slate-900 w-10 outline-none px-12 cursor-pointer' key={indx} value={option.title} selected={locale == option.title ? true : false}><span className='px-10 cursor-pointer'>{option.title.toLocaleUpperCase()}</span></option>
             ))}
           </select>
         </div>
