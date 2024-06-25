@@ -3,6 +3,7 @@ import Hero from '@/components/hero'
 import Services from './services/page'
 import Header from '@/components/header'
 import Team from './team/page'
+import Footer from '@/components/footer'
 
 // import Services  from '@/components/services';
 export default function Home() {
@@ -11,5 +12,6 @@ export default function Home() {
   <Hero/>'
   <Services/>
   <Team/>
+  <Footer/>
   </div>)
 }
