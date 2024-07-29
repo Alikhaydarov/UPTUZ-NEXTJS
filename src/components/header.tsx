@@ -21,7 +21,7 @@ function Header() {
     const t = useTranslations('Header')
     const { theme } = useTheme();
     return (
-        <header className="backdrop-blur-2xl flex flex-wrap sm:justify-start sm:flex-nowrap w-full shadow-md fixed z-10">
+        <header className="backdrop-blur-2xl flex flex-wrap sm:justify-start sm:flex-nowrap w-full shadow-md fixed top-0  z-10">
             <nav className="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between" aria-label="Global">
                 <Link href={"/"}>
                     {theme === "light" ? <Image src={logo} alt='logo' className='sm:ml-10' height={"45"} /> : <Image src={logo2} alt='logo' className='sm:ml-10' height={"45"} />}

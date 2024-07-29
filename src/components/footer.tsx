@@ -22,9 +22,6 @@ function Footer() {
                         <FaTelegramPlane className="text-2xl "/>  <span className="px-3">Telegram</span>
                         </a>
                         <a className="text-black dark:text-gray-300 flex cursor-pointer">
-                        <FaTwitter className="text-2xl "/>  <span className="px-3">Twitter</span>
-                        </a>
-                        <a className="text-black dark:text-gray-300 flex cursor-pointer">
                         <FaYoutube  className="text-2xl "/>  <span className="px-3">Youtube</span>
                         </a>
                         <a  href="https://www.instagram.com/uptuz" className="text-black dark:text-gray-300 flex cursor-pointer">
