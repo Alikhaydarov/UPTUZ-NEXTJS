@@ -18,7 +18,7 @@ export default function Hero() {
         class="bg-sky-200 absolute h-96 w-1/4 rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-[200px] translate-y-[100px]"
       ></div></div></> */}
 <Fade cascade={true} direction="left" triggerOnce={true} duration={600}>
-    <div className="pt-16 pb-10 sm:pt-24 sm:pb-40 lg:pt-60 lg:pb-48 w-full top-0">
+    <div className="pt-16 pb-10 lg:pr-16 sm:pt-24 sm:pb-40 lg:pt-60 lg:pb-48 w-full top-0">
       <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
         <div className="sm:max-w-lg w-full">
           <h1 className="text-4xl font-bold tracking-tight dark:text-white sm:text-5xl sm:leading-tight w-full max-sm:mt-10">{t('title1')}</h1>
@@ -34,7 +34,7 @@ export default function Hero() {
                 <div className="flex items-center space-x-6 lg:space-x-8">
                   <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
     
-                    <div className="h-64 w-44 overflow-hidden rounded-lg">
+                    <div className="h-64 w-40 overflow-hidden rounded-lg">
                       <img src="https://static.vecteezy.com/system/resources/previews/024/114/189/original/programmer-working-on-computer-coders-or-programmers-writing-program-landing-page-for-web-it-courses-with-html-and-php-vector.jpg" alt="" className="h-full w-full object-cover object-center"/>
                     </div>
                   </div>
