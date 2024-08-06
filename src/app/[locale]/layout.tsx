@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 import { HydrationContext, Client, HydrationProvider } from "react-hydration-provider";
 import Provider from "./provider";// import { Providers} from "./providers";
 // import Header from "@/components/header";
-import Hero from "@/components/hero";
+import Hero from '../../components/hero';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 
