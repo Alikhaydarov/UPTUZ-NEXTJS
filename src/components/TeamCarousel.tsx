@@ -78,7 +78,7 @@ const TeamCarousel = () => {
 	]
 
 	return (
-		<div className='container px-10 pr-20'>
+		<div className='container px-10 lg:pr-20'>
 			<h1 className='text-2xl font-semibold text-center title-font text-gray-900 dark:text-white'>
 				OUR TEAM
 			</h1>
@@ -92,10 +92,10 @@ const TeamCarousel = () => {
 					{teamMembers.map((member, index) => (
 						<CarouselItem
 							key={index}
-							className='lg:basis-1/5 max-sm:basis-1/2 md:basis-1/3 h-100 border-transparent p-2'
+							className='lg:basis-1/5 max-sm:basis-full md:basis-1/3 h-100 border-transparent p-2'
 						>
 							<Card
-								className='border-transparent w-[280px]'
+								className='border-transparent w-full max-sm:w-full'
 								style={{ boxShadow: 'none', border: 'none' }}
 							>
 								<CardHeader>
@@ -103,7 +103,7 @@ const TeamCarousel = () => {
 										<img
 											src={member.imgSrc}
 											alt={member.name}
-											className='transition-opacity duration-300 rounded-xl object-cover lg:h-[280px] '
+											className='transition-opacity duration-300 rounded-xl object-cover lg:h-[280px] lg:w-[350px] max-sm:h-[300px] max-sm:w-[500px]'
 											style={{ boxShadow: 'none', border: 'none' }}
 										/>
 										<div className='absolute rounded-xl inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
@@ -140,13 +140,11 @@ const TeamCarousel = () => {
 									</CardTitle>
 								</CardHeader>
 								<CardContent>
-									<CardDescription className='text-start pt-[-2rem] text-sm'>
+									<CardDescription className='relative text-start max-sm:top-[-1em] pt-[-2rem] text-sm'>
 										{member.role}
 									</CardDescription>
 								</CardContent>
-								<CardFooter className='flex justify-around'>
-									{/* Additional information or buttons */}
-								</CardFooter>
+						
 							</Card>
 						</CarouselItem>
 					))}
