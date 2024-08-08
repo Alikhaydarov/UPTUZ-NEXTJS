@@ -75,6 +75,14 @@ const TeamCarousel = () => {
 			telegram: '#',
 			instagram: '#',
 		},
+		{
+			name: 'Nurbek Eshmurodov',
+			role: 'Adminstrator',
+			imgSrc: 'https://uptuz.vercel.app/assets/photo_2_2024-01-13_00-31-52-PHUDMcra.jpg',
+			github: '#',
+			telegram: '#',
+			instagram: 'https://www.instagram.com/nurbek07.me',
+		},
 	]
 
 	return (
