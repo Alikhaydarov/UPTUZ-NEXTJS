@@ -6,7 +6,6 @@ import {
 	Card,
 	CardContent,
 	CardDescription,
-	CardFooter,
 	CardHeader,
 	CardTitle,
 } from '../components/ui/card'
@@ -70,7 +69,8 @@ const TeamCarousel = () => {
 		{
 			name: 'Name',
 			role: 'DevOps Engineer',
-			imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010',
+			imgSrc:
+				'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010',
 			github: '#',
 			telegram: '#',
 			instagram: '#',
@@ -78,7 +78,8 @@ const TeamCarousel = () => {
 		{
 			name: 'Nurbek Eshmurodov',
 			role: 'Adminstrator',
-			imgSrc: 'https://uptuz.vercel.app/assets/photo_2_2024-01-13_00-31-52-PHUDMcra.jpg',
+			imgSrc:
+				'https://uptuz.vercel.app/assets/photo_2_2024-01-13_00-31-52-PHUDMcra.jpg',
 			github: '#',
 			telegram: '#',
 			instagram: 'https://www.instagram.com/nurbek07.me',
@@ -95,7 +96,7 @@ const TeamCarousel = () => {
 				className='relative border-0 shadow-none'
 			>
 				<CarouselPrevious className='bg-white dark:bg-slate-900 w-12 h-12 absolute left-[-0.3rem] top-1/2 transform -translate-y-1/2 z-10 p-2 shadow-lg' />
-				<CarouselNext className='bg-white dark:bg-slate-900 w-12 h-12 absolute right-[-1.5rem] top-1/2 transform -translate-y-1/2 z-10 p-2 shadow-lg' />
+				<CarouselNext className='bg-white dark:bg-slate-900 w-12 h-12 absolute right-[-0.2rem] top-1/2 transform -translate-y-1/2 z-10 p-2 shadow-lg' />
 				<CarouselContent className='flex border-transparent shadow-none'>
 					{teamMembers.map((member, index) => (
 						<CarouselItem
@@ -111,12 +112,12 @@ const TeamCarousel = () => {
 										<img
 											src={member.imgSrc}
 											alt={member.name}
-											className='transition-opacity duration-300 rounded-xl object-cover lg:h-[280px] lg:w-[350px] max-sm:h-[300px] max-sm:w-[500px]'
+											className='transition-opacity duration-300 rounded-xl object-cover lg:h-[280px] lg:w-[400px] max-sm:h-[350px] max-sm:w-[500px]'
 											style={{ boxShadow: 'none', border: 'none' }}
 										/>
 										<div className='absolute rounded-xl inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
 											<div className='flex space-x-6'>
-                        				<a
+												<a
 													href={member.telegram}
 													target='_blank'
 													rel='noopener noreferrer'
@@ -152,7 +153,6 @@ const TeamCarousel = () => {
 										{member.role}
 									</CardDescription>
 								</CardContent>
-						
 							</Card>
 						</CarouselItem>
 					))}
