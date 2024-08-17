@@ -27,7 +27,7 @@ function Header() {
 						<Image
 							src={logo}
 							alt='logo'
-							className='relative lg:right-10 sm:ml-10'
+							className='relative lg:ml-2 sm:ml-10'
 							height={'45'}
 						/>
 					) : (

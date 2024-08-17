@@ -1,7 +1,10 @@
 'use client'
 import { useMemo, useState } from 'react'
 import { GrFormNextLink } from 'react-icons/gr'
+import { Fade } from "react-awesome-reveal";
+
 // Define the types for projects and categories
+
 type ProjectCategory = 'all' | 'webSites' | 'bots' | 'crm'
 
 const projects = {
@@ -98,7 +101,10 @@ export default function Portfolio() {
 	}
 
 	return (
-		<div className='container mx-auto p-4 mb-10'>
+		<>
+		<Fade cascade={true} direction="left" triggerOnce={true} duration={600}>
+		<div className='container mx-auto p-16 mb-10'>
+
 			<h1 className='text-4xl font-bold text-center mb-8'>Portfolio</h1>
 			<div className='flex justify-center space-x-4 mb-6'>
 				<button
@@ -173,6 +179,9 @@ export default function Portfolio() {
 					</div>
 				))}
 			</div>
+			
 		</div>
+		</Fade>
+		</>
 	)
 }

@@ -87,10 +87,8 @@ const TeamCarousel = () => {
 	]
 
 	return (
-		<div className='container px-10 lg:pr-20'>
-			<h1 className='text-2xl font-semibold text-center title-font text-gray-900 dark:text-white'>
-				OUR TEAM
-			</h1>
+		<div className='container px-10 lg:pr-8'>
+	<h1 className='text-4xl font-bold text-center mb-8'>Our Team</h1>
 			<Carousel
 				plugins={[plugin.current]}
 				className='relative border-0 shadow-none'
@@ -112,7 +110,7 @@ const TeamCarousel = () => {
 										<img
 											src={member.imgSrc}
 											alt={member.name}
-											className='transition-opacity duration-300 rounded-xl object-cover lg:h-[280px] lg:w-[400px] max-sm:h-[350px] max-sm:w-[500px]'
+											className='transition-opacity duration-300 rounded-xl object-cover lg:h-[260px] lg:w-[400px] max-sm:h-[350px] max-sm:w-[500px]'
 											style={{ boxShadow: 'none', border: 'none' }}
 										/>
 										<div className='absolute rounded-xl inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>

@@ -6,6 +6,7 @@ import Hero from '../../components/hero'
 import Portfolio from '../../components/projectpage'
 import TeamCarousel from '../../components/TeamCarousel'
 import Services from './services/page'
+// import CircleText from '../../components/circl'
 
 // import Services  from '@/components/services';
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
 			<div className=''>
 				<Header />
 				<Hero />
+				{/* <CircleText/> */}
 				<Services />
 				<Portfolio />
 				<TeamCarousel />
