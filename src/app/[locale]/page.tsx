@@ -3,6 +3,7 @@ import { ThemeProvider } from 'next-themes'
 import Footer from '../../components/footer'
 import Header from '../../components/header'
 import Hero from '../../components/hero'
+import Portfolio from '../../components/projectpage'
 import TeamCarousel from '../../components/TeamCarousel'
 import Services from './services/page'
 
@@ -15,6 +16,7 @@ export default function Home() {
 				<Header />
 				<Hero />
 				<Services />
+				<Portfolio />
 				<TeamCarousel />
 				{/* <Team/> */}
 				<Footer />
