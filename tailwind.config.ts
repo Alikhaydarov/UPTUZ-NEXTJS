@@ -17,6 +17,18 @@ module.exports = {
       },
     },
     extend: {
+      backdropBlur: {
+        'sm': '4px',
+        'md': '8px',
+        'lg': '12px',
+        'xl': '16px',
+      },
+      height: {
+        '28': '7rem', // Example of adding a custom height
+      },
+      colors: {
+        'shadow-dark': 'rgba(0, 0, 0, 0.8)', // Example of adding a custom color
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
