@@ -31,13 +31,13 @@ const TeamCarousel = () => {
 			instagram: 'https://www.instagram.com/khaydarov_coder/',
 		},
 		{
-			name: "Ulug'bek Ismoilov",
-			role: 'Backend Developer',
+			name: 'Name',
+			role: 'Full Stack Developer',
 			imgSrc:
-				'https://uptuz.vercel.app/assets/photo_3_2024-01-12_23-18-57-14G6P4QJ.jpg',
-			github: 'https://github.com/UPTUZOVER',
-			telegram: 'https://t.me/uptuz-owner',
-			instagram: 'https://www.instagram.com/samur0770/',
+				'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010',
+			github: '#',
+			telegram: '#',
+			instagram: '#',
 		},
 		{
 			name: 'Name',
