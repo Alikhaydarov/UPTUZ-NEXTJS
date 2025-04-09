@@ -2,6 +2,7 @@
 import Autoplay from 'embla-carousel-autoplay'
 import * as React from 'react'
 import { FaGithub, FaInstagram, FaTelegram } from 'react-icons/fa'
+import imgAli from '../components/images/photo_1_2024-01-12_23-18-57.jpg'
 import {
 	Card,
 	CardContent,
@@ -21,29 +22,30 @@ const TeamCarousel = () => {
 	const plugin = React.useRef(
 		Autoplay({ delay: 3000, stopOnInteraction: true })
 	)
+
 	const teamMembers = [
 		{
 			name: 'Ali Khaydarov',
 			role: 'Frontend Developer',
-			imgSrc: 'https://uptuz.vercel.app/assets/20240209_152948-Fm14QjzX.jpg',
+			imgSrc: imgAli.src, // ✅ Fix shu yerda
 			github: 'https://github.com/Alikhaydarov',
 			telegram: 'https://t.me/khaydarov_coder',
 			instagram: 'https://www.instagram.com/khaydarov_coder/',
 		},
 		{
-			name: 'Name',
-			role: 'Full Stack Developer',
+			name: 'Ulug`bek Ismoilov',
+			role: 'BackEnd Developer',
 			imgSrc:
-				'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010',
+				'https://uptuz.vercel.app/assets/photo_3_2024-01-12_23-18-57-14G6P4QJ.jpg',
 			github: '#',
 			telegram: '#',
 			instagram: '#',
 		},
 		{
-			name: 'Name',
-			role: 'Full Stack Developer',
+			name: 'Orzu Ashurqulov',
+			role: 'BackEnd Developer',
 			imgSrc:
-				'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010',
+				'https://uptuz.vercel.app/assets/photo_2_2024-01-12_23-18-57-CU9kBL5X.jpg',
 			github: '#',
 			telegram: '#',
 			instagram: '#',
@@ -76,10 +78,10 @@ const TeamCarousel = () => {
 			instagram: '#',
 		},
 		{
-			name: 'Nurbek Eshmurodov',
-			role: 'Adminstrator',
+			name: 'none',
+			role: 'Administrator',
 			imgSrc:
-				'https://uptuz.vercel.app/assets/photo_2_2024-01-13_00-31-52-PHUDMcra.jpg',
+				'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010',
 			github: '#',
 			telegram: '#',
 			instagram: 'https://www.instagram.com/nurbek07.me',
@@ -88,7 +90,7 @@ const TeamCarousel = () => {
 
 	return (
 		<div className='container px-10 lg:pr-8'>
-	<h1 className='text-4xl font-bold text-center mb-8'>Our Team</h1>
+			<h1 className='text-4xl font-bold text-center mb-8'>Our Team</h1>
 			<Carousel
 				plugins={[plugin.current]}
 				className='relative border-0 shadow-none'
@@ -129,7 +131,7 @@ const TeamCarousel = () => {
 													rel='noopener noreferrer'
 													className='text-white text-2xl hover:text-black'
 												>
-													<FaGithub className='' />
+													<FaGithub />
 												</a>
 												<a
 													href={member.instagram}
