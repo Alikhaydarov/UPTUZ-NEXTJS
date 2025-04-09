@@ -2,6 +2,7 @@
 import { useMemo, useState } from 'react'
 import { GrFormNextLink } from 'react-icons/gr'
 import { Fade } from "react-awesome-reveal";
+import imgProject from './images/image.png'
 
 // Define the types for projects and categories
 
@@ -12,53 +13,35 @@ const projects = {
 		{
 			id: 1,
 			title: 'Web-sayt',
-			description: 'RS-STROY',
+			description: 'English-Test',
 			category: 'web',
-			imageUrl:
-				'https://api.mrit.uz/media/Screenshot_from_2024-04-24_16-54-56_j4x39n1.png',
+			imageUrl: 'https://github.com/Alikhaydarov/restaurant.js/blob/main/img/Screenshot%20from%202025-04-09%2015-04-32.png?raw=true',
+			link: 'https://english-test-one.vercel.app/',  // Add link for "Barchasini ko\'rish"
 		},
 		{
-			id: 1,
-			title: 'CRM',
-			description: 'CRM Sistema',
-			imageUrl: 'https://api.mrit.uz/media/city_house.png',
-			category: 'crm',
-		},
-		{
-			id: 1,
-			title: 'Bot Project 1',
-			description: 'Description of bot project 1',
-			imageUrl: 'path/to/bot1.jpg',
-			category: 'bot',
+			id: 2,
+			title: 'Web-sayt',
+			description: 'Online-Exam',
+			category: 'web',
+			imageUrl: 'https://github.com/Alikhaydarov/restaurant.js/blob/main/img/Screenshot%20from%202025-04-09%2015-23-36.png?raw=true',
+			link: 'http://13.40.123.211:9000/',  // Add link for "Barchasini ko\'rish"
 		},
 	],
 	webSites: [
 		{
 			id: 1,
 			title: 'Web-sayt',
-			description: 'RS-STROY',
+			description: 'English-Test',
 			category: 'web',
-			imageUrl:
-				'https://api.mrit.uz/media/Screenshot_from_2024-04-24_16-54-56_j4x39n1.png',
+			imageUrl: 'https://github.com/Alikhaydarov/restaurant.js/blob/main/img/Screenshot%20from%202025-04-09%2015-04-32.png?raw=true',
+			link: 'https://example.com/english-test',  // Add link for "Barchasini ko\'rish"
 		},
 	],
 	bots: [
-		{
-			id: 1,
-			title: 'Bot Project 1',
-			description: 'Description of bot project 1',
-			imageUrl: 'path/to/bot1.jpg',
-			category: 'bot',
-		},
+		// Example of bot project
 	],
 	crm: [
-		{
-			id: 1,
-			title: 'CRM',
-			description: 'CRM Sistema',
-			imageUrl: 'https://api.mrit.uz/media/city_house.png',
-			category: 'crm',
-		},
+		// Example of CRM project
 	],
 }
 
@@ -111,7 +94,7 @@ export default function Portfolio() {
 					className={`px-4 py-2  font-semibold rounded ${
 						activeTab === 'all'
 							? 'bg-blue-600 text-white'
-							: 'dark: dark:bg-gray-800 bg-gray-200'
+							: 'dark:bg-gray-800 bg-gray-200'
 					}`}
 					onClick={() => handleTabClick('all')}
 				>
@@ -164,11 +147,11 @@ export default function Portfolio() {
 							<h3 className='text-xl font-extrabold z-30 text-[#2664eb]'>
 								{project.title}
 							</h3>
-							<p className=' text-xl mt-2 font-extrabold z-30'>
+							<p className=' text-xl mt-2 font-extrabold z-30 text-white'>
 								{project.description}
 							</p>
 							<div className='absolute backdrop-blur-md  cursor-pointer inset-0 flex flex-row  items-center justify-center p-4 bg-black bg-opacity-50 transition-opacity duration-300 opacity-0 group-hover:opacity-100 z-50'>
-								<a href='/' target='_blank' className='inline-block'>
+								<a href={project.link} target='_blank' className='inline-block'>
 									<h3 className='text-xl font-semibold text-white'>
 										Barchasini ko'rish➡️
 									</h3>
