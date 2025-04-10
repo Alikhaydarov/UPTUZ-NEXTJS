@@ -17,7 +17,7 @@ const CircleText: React.FC = () => {
   const currentLogo = theme === 'dark' ? logo2 : logo;
 
   return (
-    <div className="flex items-center relative buttom-[10em] justify-center h-auto  bg-white dark:bg-gray-900">
+    <div className="hidden sm:block items-center relative buttom-[10em] justify-center h-auto  bg-white dark:bg-gray-900">
       <div className="relative w-52 h-52 rounded-full flex items-center justify-center">
         <img
           src={currentLogo.src}

@@ -20,7 +20,7 @@ function Footer() {
                     © 2024 UPTUZ — Barcha huquqlari himoyalangan.
                 </p>
                 <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-                    <a href='https://t.me/uptuz' className="dark:text-gray-300 flex cursor-pointer text-black items-center mr-4">
+                    <a href='https://t.me/upt_uz' className="dark:text-gray-300 flex cursor-pointer text-black items-center mr-4">
                         <FaTelegramPlane className="text-2xl" /> <span className="px-2">Telegram</span>
                     </a>
                     <a className="text-black dark:text-gray-300 flex cursor-pointer items-center mr-4">

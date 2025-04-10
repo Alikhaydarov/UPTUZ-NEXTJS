@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { useTheme } from 'next-themes'
@@ -16,75 +16,93 @@ function Header() {
 	const { theme } = useTheme()
 	const [isOpen, setIsOpen] = useState(false)
 
-	return (
-		<header className='backdrop-blur-2xl flex flex-wrap sm:justify-start sm:flex-nowrap w-full shadow-md fixed top-0 z-50'>
-			<nav className='max-w-[85rem] w-full mx-auto px-6 flex flex-wrap items-center justify-between' aria-label='Global'>
-				{/* Logo */}
-				<Link href='/'>
-					{theme === 'light' ? (
-						<Image src={logo} alt='logo' height={45} className='relative lg:ml-2 sm:ml-10' />
-					) : (
-						<Image src={logo2} alt='logo' height={45} className='relative lg:ml-2 sm:ml-10' />
-					)}
-				</Link>
+	// Block scroll when menu is open
+	useEffect(() => {
+		document.body.style.overflow = isOpen ? 'hidden' : ''
+	}, [isOpen])
 
-				{/* Toggle Button */}
-				<div className='sm:hidden flex items-center gap-x-2 p-3'>
-					<button
-						onClick={() => setIsOpen(!isOpen)}
-						className='p-2.5 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 dark:bg-transparent dark:border-gray-700 dark:text-white dark:hover:bg-white/10'
-					>
-						{isOpen ? (
-							<svg className='h-5 w-5' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-								<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' />
-							</svg>
+	return (
+		<>
+			<header className='backdrop-blur-2xl fixed top-0 z-50 w-full shadow-md'>
+				<nav className='max-w-[85rem] mx-auto w-full px-6 py-4 flex items-center justify-between'>
+					{/* Logo */}
+					<Link href='/'>
+						{theme === 'light' ? (
+							<Image src={logo} alt='logo' height={45} />
 						) : (
-							<svg className='h-5 w-5' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+							<Image src={logo2} alt='logo' height={45} />
+						)}
+					</Link>
+
+					{/* Mobile Toggle */}
+					<div className='sm:hidden'>
+						<button
+							onClick={() => setIsOpen(true)}
+							className='p-2 rounded-md border dark:border-gray-600 border-gray-300 bg-white dark:bg-transparent text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition'
+						>
+							<svg className='h-6 w-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
 								<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />
 							</svg>
-						)}
-					</button>
-				</div>
-
-				{/* Menyu */}
-				<div className={`w-full sm:flex sm:items-center sm:space-x-8 sm:static sm:w-auto transition-all duration-300 ${isOpen ? 'block' : 'hidden'}`}>
-					<div className='flex flex-col sm:flex-row gap-12 mt-5 sm:mt-0 sm:ps-5 p-7'>
-						<Link className='font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500' href='/about'>
-							{t('link1')}
-						</Link>
-						<Link className='font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500' href='/services'>
-							{t('link2')}
-						</Link>
-						<Link className='font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500' href='#'>
-							{t('link3')}
-						</Link>
-						<Link className='font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500' href='#'>
-							{t('link4')}
-						</Link>
-						<Link className='font-medium text-slate-950 hover:text-gray-400 dark:text-slate-50 dark:hover:text-gray-500' href='#'>
-							{t('link5')}
-						</Link>
+						</button>
 					</div>
 
-					{/* Desktop version (Language and Theme toggle) */}
-					<div className='sm:flex items-center gap-x-2 hidden'>
+					{/* Desktop Nav */}
+					<div className='hidden sm:flex items-center gap-10'>
+						<Link href='/about' className='text-gray-800 dark:text-white hover:text-gray-400 transition'>{t('link1')}</Link>
+						<Link href='/services' className='text-gray-800 dark:text-white hover:text-gray-400 transition'>{t('link2')}</Link>
+						<Link href='#' className='text-gray-800 dark:text-white hover:text-gray-400 transition'>{t('link3')}</Link>
+						<Link href='#' className='text-gray-800 dark:text-white hover:text-gray-400 transition'>{t('link4')}</Link>
+						<Link href='#' className='text-gray-800 dark:text-white hover:text-gray-400 transition'>{t('link5')}</Link>
 						<LocaleSwitcher />
 						<ThemeToggle />
 					</div>
+				</nav>
 
-					{/* Mobile version (Language and Theme toggle) */}
-					<div className='sm:hidden flex flex-col items-start px-7 pb-5 gap-4'>
-						<div className='flex gap-4'>
-							<LocaleSwitcher />
-							<ThemeToggle />
+				{/* Scroll Progress */}
+				<motion.div className='fixed top-full w-full left-0 h-1 bg-violet-800 origin-left' style={{ scaleX: scrollYProgress }} />
+			</header>
+
+			{/* Mobile Menu Overlay */}
+			{isOpen && (
+  <div className='fixed inset-0 z-[999] bg-black/50 backdrop-blur-2xl text-white flex flex-col justify-center items-center px-6'>
+
+					{/* Close Button */}
+					<button onClick={() => setIsOpen(false)} className='absolute top-6 right-6'>
+						<svg className='h-7 w-7' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+							<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' />
+						</svg>
+					</button>
+
+					{/* Menu Items */}
+					<div className='flex flex-col gap-6 text-xl font-semibold text-center'>
+						<Link onClick={() => setIsOpen(false)} href='/about' className='hover:text-gray-400'>{t('link1')}</Link>
+						<Link onClick={() => setIsOpen(false)} href='/services' className='hover:text-gray-400'>{t('link2')}</Link>
+						<Link onClick={() => setIsOpen(false)} href='#' className='hover:text-gray-400'>{t('link3')}</Link>
+						<Link onClick={() => setIsOpen(false)} href='#' className='hover:text-gray-400'>{t('link4')}</Link>
+						<Link onClick={() => setIsOpen(false)} href='#' className='hover:text-gray-400'>{t('link5')}</Link>
+					</div>
+		{/* Locale + Theme Toggle */}
+		<div className='absolute bottom-6 flex gap-4'>
+						<LocaleSwitcher />
+						<ThemeToggle />
+					</div>
+					{/* Social Icons */}
+					<div className='absolute bottom-24 flex flex-col items-center gap-4'>
+						<div className='flex gap-5 text-xl'>
+							<span className='hover:text-gray-400'>f</span>
+							<span className='hover:text-gray-400'>X</span>
+							<span className='hover:text-gray-400'>IG</span>
+							<span className='hover:text-gray-400'>TG</span>
+							<span className='hover:text-gray-400'>in</span>
+							<span className='hover:text-gray-400'>Bē</span>
+							<span className='hover:text-gray-400'>◎</span>
+							<span className='hover:text-gray-400'>★</span>
 						</div>
+						<p className='text-sm mt-2'>+998 71 200 70 07</p>
 					</div>
 				</div>
-			</nav>
-
-			{/* Scroll indicator */}
-			<motion.div className='fixed top-full w-full left-0 h-1 bg-violet-800 origin-left' style={{ scaleX: scrollYProgress }} />
-		</header>
+			)}
+		</>
 	)
 }
 

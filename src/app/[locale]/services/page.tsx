@@ -53,8 +53,8 @@ const services = [
 export default function Services() {
 	return (
 		<>
-		<h1 className='text-4xl font-bold text-center mb-8'>Our Services</h1>
-			<div className='grid md:grid-cols-2 max-w-screen-xl max-sm:p-4 mx-auto gap-10 mt-16 mb-7 px-1'>
+		<h1 className='text-4xl font-bold text-center mb-12 sm:mt-16'>Our Services</h1>
+			<div className='grid md:grid-cols-2 max-w-screen-xl max-sm:p-4 mx-auto gap-10 sm:mt-16 mb-7 px-1'>
 				{services.map((service, index) => (
 					<Fade
 						key={index}

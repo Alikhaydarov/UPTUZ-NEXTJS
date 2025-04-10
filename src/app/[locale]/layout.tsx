@@ -34,18 +34,25 @@ export default function RootLayout({
 
   return (
     <html lang={locale} className={inter.className}>
-      <body className="dark:bg-gray-900">
-        <ThemeProvider defaultTheme="system" attribute="class">
-          <HydrationProvider>
-            <Client>
-              <NextIntlClientProvider locale={locale} messages={messages}>
-                {/* <Header /> */}
-                {children}
-              </NextIntlClientProvider >
-            </Client>
-          </HydrationProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+  <body className="relative dark:bg-gray-900 bg-white">
+    {/* Gradient Blur Balls */}
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+      <div className="absolute bg-[#a78bfa] dark:bg-[#7c3aed] h-96 w-96 rounded-full mix-blend-multiply filter blur-3xl opacity-30 top-[-100px] left-[-100px]" />
+      <div className="absolute bg-[#f472b6] dark:bg-[#db2777] h-96 w-96 rounded-full mix-blend-multiply filter blur-3xl opacity-30 top-[200px] right-[-150px]" />
+      <div className="absolute bg-[#60a5fa] dark:bg-[#2563eb] h-96 w-96 rounded-full mix-blend-multiply filter blur-3xl opacity-30 bottom-[-150px] left-[150px]" />
+    </div>
+
+    <ThemeProvider defaultTheme="system" attribute="class">
+      <HydrationProvider>
+        <Client>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </Client>
+      </HydrationProvider>
+    </ThemeProvider>
+  </body>
+</html>
+
   );
 }

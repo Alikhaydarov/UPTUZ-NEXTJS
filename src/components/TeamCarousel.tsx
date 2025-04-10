@@ -26,15 +26,15 @@ const TeamCarousel = () => {
 	const teamMembers = [
 		{
 			name: 'Ali Khaydarov',
-			role: 'Frontend Developer',
+			role: 'Fron-tend Developer',
 			imgSrc: imgAli.src, // ✅ Fix shu yerda
 			github: 'https://github.com/Alikhaydarov',
-			telegram: 'https://t.me/khaydarov_coder',
-			instagram: 'https://www.instagram.com/khaydarov_coder/',
+			telegram: 'https://t.me/al1kh_17',
+			instagram: 'https://www.instagram.com/al1kh.17',
 		},
 		{
 			name: 'Ulug`bek Ismoilov',
-			role: 'BackEnd Developer',
+			role: 'Team-Lead',
 			imgSrc:
 				'https://uptuz.vercel.app/assets/photo_3_2024-01-12_23-18-57-14G6P4QJ.jpg',
 			github: '#',
@@ -43,12 +43,12 @@ const TeamCarousel = () => {
 		},
 		{
 			name: 'Orzu Ashurqulov',
-			role: 'BackEnd Developer',
+			role: 'Back-End Developer',
 			imgSrc:
 				'https://uptuz.vercel.app/assets/photo_2_2024-01-12_23-18-57-CU9kBL5X.jpg',
-			github: '#',
-			telegram: '#',
-			instagram: '#',
+			github: 'https://github.com/orzu0011',
+			telegram: 'https://t.me/o_ashurqulov',
+			instagram: 'https://www.instagram.com/_orzzu_',
 		},
 		{
 			name: 'Name',
