@@ -26,6 +26,22 @@ const projects = {
 			imageUrl: 'https://github.com/Alikhaydarov/restaurant.js/blob/main/img/Screenshot%20from%202025-04-09%2015-23-36.png?raw=true',
 			link: 'http://13.40.123.211:9000/',  // Add link for "Barchasini ko\'rish"
 		},
+		{
+			id: 3,
+			title: 'Web-sayt',
+			description: 'Restaurant',
+			category: 'web',
+			imageUrl: 'https://github.com/Alikhaydarov/restaurant.js/blob/main/img/Screenshot%20from%202025-04-09%2015-14-58.png?raw=true',
+			link: 'https://restaurant-js-sigma.vercel.app/',  // Add link for "Barchasini ko\'rish"
+		},
+		{
+			id: 4,
+			title: 'Web-sayt',
+			description: 'Portfolio',
+			category: 'web',
+			imageUrl: 'https://github.com/Alikhaydarov/restaurant.js/blob/main/img/Screenshot%20from%202025-04-10%2015-22-23.png?raw=true',
+			link: 'https://ismoilov.vercel.app/',  // Add link for "Barchasini ko\'rish"
+		},
 	],
 	webSites: [
 		{
@@ -34,7 +50,31 @@ const projects = {
 			description: 'English-Test',
 			category: 'web',
 			imageUrl: 'https://github.com/Alikhaydarov/restaurant.js/blob/main/img/Screenshot%20from%202025-04-09%2015-04-32.png?raw=true',
-			link: 'https://example.com/english-test',  // Add link for "Barchasini ko\'rish"
+			link: 'https://english-test-one.vercel.app/',  // Add link for "Barchasini ko\'rish"
+		},
+		{
+			id: 2,
+			title: 'Web-sayt',
+			description: 'Online-Exam',
+			category: 'web',
+			imageUrl: 'https://github.com/Alikhaydarov/restaurant.js/blob/main/img/Screenshot%20from%202025-04-09%2015-23-36.png?raw=true',
+			link: 'http://13.40.123.211:9000/',  // Add link for "Barchasini ko\'rish"
+		},	
+		{
+			id: 3,
+			title: 'Web-sayt',
+			description: 'Restaurant',
+			category: 'web',
+			imageUrl: 'https://github.com/Alikhaydarov/restaurant.js/blob/main/img/Screenshot%20from%202025-04-09%2015-14-58.png?raw=true',
+			link: 'https://restaurant-js-sigma.vercel.app/',  // Add link for "Barchasini ko\'rish"
+		},
+		{
+			id: 4,
+			title: 'Web-sayt',
+			description: 'Portfolio',
+			category: 'web',
+			imageUrl: 'https://github.com/Alikhaydarov/restaurant.js/blob/main/img/Screenshot%20from%202025-04-10%2015-22-23.png?raw=true',
+			link: 'https://ismoilov.vercel.app/',  // Add link for "Barchasini ko\'rish"
 		},
 	],
 	bots: [
