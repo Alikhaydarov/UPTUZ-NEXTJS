@@ -1,43 +1,43 @@
 'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { IoIosGlobe } from "react-icons/io";
-import Image from 'next/image';
+import React from 'react';
 import { useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import img1 from './../../public/uzbekistan-flag-png-large.png'
 
-// const options = ["en", "uz", "ru"]
+// Til variantlari
 const options = [
-  {
-    title: 'en',
-  },
-  {
-    title: 'uz',
-  },
-  {
-    title: 'ru',
-  }
-]
-
+  { title: 'en' },
+  { title: 'uz' },
+  { title: 'ru' }
+];
 
 const LocaleSwitcher = () => {
-  const dsf = useLocale()
-  const router = useRouter()
-  const locale = useLocale()
+  const locale = useLocale(); 
+  const router = useRouter();
 
-  const handleChange = (e: any) => {
-    router.push(`/${e.target.value}`)
-  }
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    // Tilni o'zgartirganingizda sahifani yangi tilga yo'naltirish
+    router.push(`/${e.target.value}`);
+  };
 
   return (
-    
-    <form className="w-2 mr-12 border-transparent max-sm:hidden bg-transparent">
+    <form className=" w-11 max-sm:w-auto">
       <fieldset>
-        <div className="relative border-transparent bg-transparent dark:bg-transparent border-0 ">
-          <select onChange={handleChange} className="appearance-none w-10 font-bold  py-1 px-2 bg-transparent dark:bg-transparent outline-none cursor-pointer" name="whatever" id="frm-whatever">
+        <div className="relative">
+          <select
+            onChange={handleChange}
+            className="appearance-none w-full font-bold py-1 px-2 bg-transparent dark:bg-transparent outline-none cursor-pointer"
+            name="locale"
+            id="locale-select"
+            value={locale}
+          >
             {options.map((option, indx) => (
-              <option className='dark:bg-slate-900 w-10 outline-none px-12 cursor-pointer' key={indx} value={option.title} selected={locale == option.title ? true : false}><span className='px-10 cursor-pointer'>{option.title.toLocaleUpperCase()}</span></option>
+              <option 
+                className="dark:bg-slate-900"
+                key={indx}
+                value={option.title}
+              >
+                {option.title.toLocaleUpperCase()}
+              </option>
             ))}
           </select>
         </div>
