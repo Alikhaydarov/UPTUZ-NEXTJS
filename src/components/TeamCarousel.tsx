@@ -26,7 +26,7 @@ const TeamCarousel = () => {
 	const teamMembers = [
 		{
 			name: 'Ali Khaydarov',
-			role: 'Fron-tend Developer',
+			role: 'Front-end Developer',
 			imgSrc: imgAli.src, // ✅ Fix shu yerda
 			github: 'https://github.com/Alikhaydarov',
 			telegram: 'https://t.me/al1kh_17',
