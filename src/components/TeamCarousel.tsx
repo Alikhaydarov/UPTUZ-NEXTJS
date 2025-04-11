@@ -37,9 +37,9 @@ const TeamCarousel = () => {
 			role: 'Team-Lead',
 			imgSrc:
 				'https://uptuz.vercel.app/assets/photo_3_2024-01-12_23-18-57-14G6P4QJ.jpg',
-			github: '#',
-			telegram: '#',
-			instagram: '#',
+			github: 'https://github.com/UPTUZOVER',
+			telegram: 'https://t.me/samur0000',
+			instagram: 'https://www.instagram.com/samur0770',
 		},
 		{
 			name: 'Orzu Ashurqulov',
