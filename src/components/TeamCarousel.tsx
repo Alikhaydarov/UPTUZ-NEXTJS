@@ -19,9 +19,9 @@ import {
 } from '../components/ui/carousel'
 
 const TeamCarousel = () => {
-	const plugin = React.useRef(
-		Autoplay({ delay: 3000, stopOnInteraction: true })
-	)
+	// const plugin = React.useRef(
+	// 	Autoplay({ delay: 3000, stopOnInteraction: true })
+	// )
 
 	const teamMembers = [
 		{
@@ -50,49 +50,13 @@ const TeamCarousel = () => {
 			telegram: 'https://t.me/o_ashurqulov',
 			instagram: 'https://www.instagram.com/_orzzu_',
 		},
-		{
-			name: 'Name',
-			role: 'UI/UX Designer',
-			imgSrc:
-				'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010',
-			github: '#',
-			telegram: '#',
-			instagram: '#',
-		},
-		{
-			name: 'Name',
-			role: 'DevOps Engineer',
-			imgSrc:
-				'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010',
-			github: '#',
-			telegram: '#',
-			instagram: '#',
-		},
-		{
-			name: 'Name',
-			role: 'DevOps Engineer',
-			imgSrc:
-				'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010',
-			github: '#',
-			telegram: '#',
-			instagram: '#',
-		},
-		{
-			name: 'none',
-			role: 'Administrator',
-			imgSrc:
-				'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010',
-			github: '#',
-			telegram: '#',
-			instagram: 'https://www.instagram.com/nurbek07.me',
-		},
 	]
 
 	return (
 		<div className='container px-10 lg:pr-8'>
 			<h1 className='text-4xl font-bold text-center mb-8'>Our Team</h1>
 			<Carousel
-				plugins={[plugin.current]}
+				// plugins={[plugin.current]}
 				className='relative border-0 shadow-none'
 			>
 				<CarouselPrevious className='bg-white dark:bg-slate-900 w-12 h-12 absolute left-[-0.3rem] top-1/2 transform -translate-y-1/2 z-10 p-2 shadow-lg' />
