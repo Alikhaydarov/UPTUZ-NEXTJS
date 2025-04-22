@@ -2,9 +2,11 @@
 import { useTranslations } from "next-intl";
 import { Fade } from "react-awesome-reveal";
 import CircleText from "./circl";
+import { useState } from "react"; // 🔁 Qo‘shildi
 
 export default function Hero() {
   const t = useTranslations("Hero");
+  const [loaded, setLoaded] = useState<number[]>([]); // 🔁
 
   const imageSources = [
     "https://static.vecteezy.com/system/resources/previews/024/114/189/original/programmer-working-on-computer-coders-or-programmers-writing-program-landing-page-for-web-it-courses-with-html-and-php-vector.jpg",
@@ -12,6 +14,10 @@ export default function Hero() {
     "https://static.vecteezy.com/system/resources/thumbnails/004/865/921/small/programmer-people-concept-use-laptop-and-programming-code-program-icon-spreading-with-modern-flat-style-free-vector.jpg",
     "https://static.vecteezy.com/system/resources/thumbnails/007/814/266/small/programmer-and-engineering-development-coding-web-development-website-design-developer-flat-vector.jpg"
   ];
+
+  const handleLoad = (i: number) => {
+    setLoaded((prev) => [...prev, i]);
+  };
 
   return (
     <div className="relative overflow-hidden">
@@ -34,51 +40,70 @@ export default function Hero() {
             </div>
 
             <div className=" xl:flex-col sm:pt-36">
-                {/* Desktop view */}
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl max-sm:hidden"
-                >
-                  <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8 max-sm:h-full">
-                    <div className="flex items-center space-x-6 lg:space-x-8">
-                      <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-80 w-56 overflow-hidden rounded-lg">
-                          <img
-                            src="https://static.vecteezy.com/system/resources/previews/024/114/189/original/programmer-working-on-computer-coders-or-programmers-writing-program-landing-page-for-web-it-courses-with-html-and-php-vector.jpg"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
+              {/* Desktop view */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-5xl max-sm:hidden"
+              >
+                <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8 max-sm:h-full">
+                  <div className="flex items-center space-x-6 lg:space-x-8">
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="h-80 w-56 overflow-hidden rounded-lg">
+                        <img
+                          src={imageSources[0]}
+                          alt=""
+                          onLoad={() => handleLoad(0)}
+                          className={`h-full w-full object-cover object-center transition-all duration-700 ease-in-out ${
+                            loaded.includes(0)
+                              ? "opacity-100 blur-0 scale-100"
+                              : "opacity-0 blur-sm scale-105"
+                          }`}
+                        />
                       </div>
-                      <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-80 w-56 overflow-hidden rounded-lg">
-                          <img
-                            src="https://static.vecteezy.com/system/resources/previews/016/915/123/non_2x/man-programmer-is-working-on-his-laptop-coding-and-programming-vector.jpg"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div className="h-80 w-56 overflow-hidden rounded-lg">
-                          <img
-                            src="https://static.vecteezy.com/system/resources/thumbnails/004/865/921/small/programmer-people-concept-use-laptop-and-programming-code-program-icon-spreading-with-modern-flat-style-free-vector.jpg"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
+                    </div>
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="h-80 w-56 overflow-hidden rounded-lg">
+                        <img
+                          src={imageSources[1]}
+                          alt=""
+                          onLoad={() => handleLoad(1)}
+                          className={`h-full w-full object-cover object-center transition-all duration-700 ease-in-out ${
+                            loaded.includes(1)
+                              ? "opacity-100 blur-0 scale-100"
+                              : "opacity-0 blur-sm scale-105"
+                          }`}
+                        />
                       </div>
-                      <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-80 w-56 overflow-hidden rounded-lg">
-                          <img
-                            src="https://static.vecteezy.com/system/resources/thumbnails/007/814/266/small/programmer-and-engineering-development-coding-web-development-website-design-developer-flat-vector.jpg"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
+                      <div className="h-80 w-56 overflow-hidden rounded-lg">
+                        <img
+                          src={imageSources[2]}
+                          alt=""
+                          onLoad={() => handleLoad(2)}
+                          className={`h-full w-full object-cover object-center transition-all duration-700 ease-in-out ${
+                            loaded.includes(2)
+                              ? "opacity-100 blur-0 scale-100"
+                              : "opacity-0 blur-sm scale-105"
+                          }`}
+                        />
+                      </div>
+                    </div>
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="h-80 w-56 overflow-hidden rounded-lg">
+                        <img
+                          src={imageSources[3]}
+                          alt=""
+                          onLoad={() => handleLoad(3)}
+                          className={`h-full w-full object-cover object-center transition-all duration-700 ease-in-out ${
+                            loaded.includes(3)
+                              ? "opacity-100 blur-0 scale-100"
+                              : "opacity-0 blur-sm scale-105"
+                          }`}
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
-            
+              </div>
             </div>
 
             {/* Mobile grid 2x2 */}
@@ -91,7 +116,12 @@ export default function Hero() {
                   <img
                     src={src}
                     alt={`img-${i}`}
-                    className="w-full h-full object-cover object-center"
+                    onLoad={() => handleLoad(i)}
+                    className={`w-full h-full object-cover object-center transition-all duration-700 ease-in-out ${
+                      loaded.includes(i)
+                        ? "opacity-100 blur-0 scale-100"
+                        : "opacity-0 blur-sm scale-105"
+                    }`}
                   />
                 </div>
               ))}
@@ -107,3 +137,4 @@ export default function Hero() {
     </div>
   );
 }
+

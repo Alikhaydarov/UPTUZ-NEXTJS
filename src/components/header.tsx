@@ -88,17 +88,7 @@ function Header() {
 					</div>
 					{/* Social Icons */}
 					<div className='absolute bottom-24 flex flex-col items-center gap-4'>
-						<div className='flex gap-5 text-xl'>
-							<span className='hover:text-gray-400'>f</span>
-							<span className='hover:text-gray-400'>X</span>
-							<span className='hover:text-gray-400'>IG</span>
-							<span className='hover:text-gray-400'>TG</span>
-							<span className='hover:text-gray-400'>in</span>
-							<span className='hover:text-gray-400'>Bē</span>
-							<span className='hover:text-gray-400'>◎</span>
-							<span className='hover:text-gray-400'>★</span>
-						</div>
-						<p className='text-sm mt-2'>+998 71 200 70 07</p>
+						<p className='text-sm mt-2'>+998 90 228 25 08</p>
 					</div>
 				</div>
 			)}

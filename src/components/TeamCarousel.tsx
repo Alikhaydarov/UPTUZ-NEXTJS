@@ -18,15 +18,11 @@ import {
 } from '../components/ui/carousel'
 
 const TeamCarousel = () => {
-	// const plugin = React.useRef(
-	// 	Autoplay({ delay: 3000, stopOnInteraction: true })
-	// )
-
 	const teamMembers = [
 		{
 			name: 'Ali Khaydarov',
 			role: 'Front-end Developer',
-			imgSrc: imgAli.src, // ✅ Fix shu yerda
+			imgSrc: imgAli.src,
 			github: 'https://github.com/Alikhaydarov',
 			telegram: 'https://t.me/al1kh_17',
 			instagram: 'https://www.instagram.com/al1kh.17',
@@ -53,10 +49,7 @@ const TeamCarousel = () => {
 	return (
 		<div className='container px-10 lg:pr-8'>
 			<h1 className='text-4xl font-bold text-center mb-8'>Our Team</h1>
-			<Carousel
-				// plugins={[plugin.current]}
-				className='relative border-0 shadow-none'
-			>
+			<Carousel className='relative border-0 shadow-none'>
 				<CarouselPrevious className='bg-white dark:bg-slate-900 w-12 h-12 absolute left-[-0.3rem] top-1/2 transform -translate-y-1/2 z-10 p-2 shadow-lg' />
 				<CarouselNext className='bg-white dark:bg-slate-900 w-12 h-12 absolute right-[-0.2rem] top-1/2 transform -translate-y-1/2 z-10 p-2 shadow-lg' />
 				<CarouselContent className='flex border-transparent shadow-none'>
@@ -65,17 +58,19 @@ const TeamCarousel = () => {
 							key={index}
 							className='lg:basis-1/5 max-sm:basis-full md:basis-1/3 h-100 border-transparent p-2'
 						>
-							<Card
-								className='border-transparent w-full max-sm:w-full'
-								style={{ boxShadow: 'none', border: 'none' }}
-							>
+							<Card className='border-transparent w-full max-sm:w-full' style={{ boxShadow: 'none', border: 'none' }}>
 								<CardHeader>
 									<div className='relative group'>
 										<img
 											src={member.imgSrc}
 											alt={member.name}
-											className='transition-opacity duration-300 rounded-xl object-cover lg:h-[260px] lg:w-[400px] max-sm:h-[350px] max-sm:w-[500px]'
+											className='rounded-xl object-cover lg:h-[260px] lg:w-[400px] max-sm:h-[350px] max-sm:w-[500px] 
+												opacity-0 blur-sm scale-105 transition-all duration-700 ease-in-out'
 											style={{ boxShadow: 'none', border: 'none' }}
+											onLoad={(e) => {
+												e.currentTarget.classList.remove('opacity-0', 'blur-sm', 'scale-105')
+												e.currentTarget.classList.add('opacity-100', 'blur-0', 'scale-100')
+											}}
 										/>
 										<div className='absolute rounded-xl inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
 											<div className='flex space-x-6'>
