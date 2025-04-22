@@ -1,8 +1,7 @@
 'use client'
-import Autoplay from 'embla-carousel-autoplay'
-import * as React from 'react'
 import { FaGithub, FaInstagram, FaTelegram } from 'react-icons/fa'
-import imgAli from '../components/images/photo_1_2024-01-12_23-18-57.jpg'
+import imgU from '../components/images/Artboard 1@3x@3x.jpg'
+import imgAli from '../components/images/VideoCapture_20250413-212704.jpg'
 import {
 	Card,
 	CardContent,
@@ -35,8 +34,7 @@ const TeamCarousel = () => {
 		{
 			name: 'Ulug`bek Ismoilov',
 			role: 'Team-Lead',
-			imgSrc:
-				'https://uptuz.vercel.app/assets/photo_3_2024-01-12_23-18-57-14G6P4QJ.jpg',
+			imgSrc: imgU.src,
 			github: 'https://github.com/UPTUZOVER',
 			telegram: 'https://t.me/samur0000',
 			instagram: 'https://www.instagram.com/samur0770',
