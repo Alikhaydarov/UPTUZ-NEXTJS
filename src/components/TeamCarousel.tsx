@@ -2,6 +2,7 @@
 import { FaGithub, FaInstagram, FaTelegram } from 'react-icons/fa'
 import imgU from '../components/images/Artboard 1@3x@3x.jpg'
 import imgAli from '../components/images/VideoCapture_20250413-212704.jpg'
+import imgOr from '../components/images/photo_2025-04-25_02-43-46.jpg'
 import {
 	Card,
 	CardContent,
@@ -39,7 +40,7 @@ const TeamCarousel = () => {
 			name: 'Orzu Ashurqulov',
 			role: 'Back-End Developer',
 			imgSrc:
-				'https://uptuz.vercel.app/assets/photo_2_2024-01-12_23-18-57-CU9kBL5X.jpg',
+				imgOr.src,
 			github: 'https://github.com/orzu0011',
 			telegram: 'https://t.me/o_ashurqulov',
 			instagram: 'https://www.instagram.com/_orzzu_',
